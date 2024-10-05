@@ -22,9 +22,9 @@ def home():
         title = appAPI.getTitle(link)
         test_object = appAPI.getTestObject(link)
         experiment_goal = appAPI.getExperimentGoal(link)
-        experiment_group_kind = appAPI.getExperimentGroupKind(link)
-        experiment_goal = appAPI.getExperimentGoal(link)
-        experiment_environment = appAPI.getExperimentEnvironment(link)
+        #experiment_group_kind = appAPI.getExperimentGroupKind(link)
+        #experiment_goal = appAPI.getExperimentGoal(link)
+        #experiment_environment = appAPI.getExperimentEnvironment(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
