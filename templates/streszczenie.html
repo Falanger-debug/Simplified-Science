@@ -72,7 +72,7 @@
             {Tytuł Artykułu}
             {% if link %}
             <div>
-                Odebrany poziom: <a href="{{ title }}" target="_blank">{{ title }}</a>
+                <a href="{{ title }}" target="_blank">{{ title }}</a>
             </div>
             {% endif %}
         </h1>
@@ -84,6 +84,11 @@
                Obiekt testowy:
             </h2>
             <h3>
+                {% if link %}
+                <div>
+                    <a href="{{ test_object }}" target="_blank">{{ test_object }}</a>
+                </div>
+                {% endif %}
                 Obiektem testowym jest rudy szczur.
             </h3>
         </div>

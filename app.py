@@ -8,8 +8,10 @@ def home():
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
         title= "Sztywny tytuł artykułu"
+        test_object = "Sztywny test_object"
+
         # Zwracamy szablon streszczenie.html, przekazując zmienne
-        return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title)
+        return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title, test_object=test_object)
 
     # Przy metodzie GET wyświetlaj index.html
     return render_template('index.html')
