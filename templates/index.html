@@ -162,6 +162,16 @@
         Make <span class="highlight">Education</span> Easier
     </div>
     <div class="wyszukiwarka">
+        <form>
+            <label for="poziom-wiedzy">Poziom wiedzy:</label>
+            <select id="poziom-wiedzy" name="poziom-wiedzy">
+                <option value="znikomy">Znikomy</option>
+                <option value="niski">Niski</option>
+                <option value="sredni">Średni</option>
+                <option value="zaawansowany">Zaawansowany</option>
+            </select>
+        </form>
+
         <form style="height: 60px;" action="/" method="POST"> <!-- Upewnij się, że akcja jest na '/' -->
             <input type="text" name="link" placeholder="Paste link here" required>
             <button style="height: 60px;" type="submit">
