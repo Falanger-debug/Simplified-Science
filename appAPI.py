@@ -34,44 +34,22 @@ chat_session = model.start_chat(
     ]
 )
 
-def getTitle(link):
-    prompt = "Tell me what the title of the article is "
+promptCorrect = "Nie wypisuj znaków specjalnych. Musisz być pewny, postaraj się."
 
-    response = chat_session.send_message(prompt + link)
+def getTitle(link):
+    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
+
+    response = chat_session.send_message(prompt + promptCorrect + link)
     return response.text
 
 def getTestObject(link):
-    prompt = "Tell me what the test object is."
+    prompt = "Tell me what the test object is"
 
     response = chat_session.send_message(prompt + link)
     return response.text
 
 def getExperimentGoal(link):
-    prompt = "Tell me what the experiment goal is."
-
-    response = chat_session.send_message(prompt + link)
-    return response.text
-
-def getExperimentGroupKind(link):
-    prompt = "Tell me what the experiment group kind is."
-
-    response = chat_session.send_message(prompt + link)
-    return response.text
-
-def getExperimentGroupKind(link):
-    prompt = "Tell me what the experiment group kind is."
-
-    response = chat_session.send_message(prompt + link)
-    return response.text
-
-def getExperimentGoal(link):
-    prompt = "Tell me what the goal of experiment is."
-
-    response = chat_session.send_message(prompt + link)
-    return response.text
-
-def getExperimentEnvironment(link):
-    prompt = "Tell me what the goal of experiment is."
+    prompt = "Tell me what the goal of the experiment is"
 
     response = chat_session.send_message(prompt + link)
     return response.text
