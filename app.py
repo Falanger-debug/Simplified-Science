@@ -9,9 +9,11 @@ def home():
         knowledge = request.form.get('poziom-wiedzy')
         title= "Sztywny tytuł artykułu"
         test_object = "Sztywny test_object"
+        experiment_goal = "Sztywny cel eksperymentu"
+        experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
-        return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title, test_object=test_object)
+        return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title, test_object=test_object, experiment_goal=experiment_goal, experiment_group_kind=experiment_group_kind)
 
     # Przy metodzie GET wyświetlaj index.html
     return render_template('index.html')

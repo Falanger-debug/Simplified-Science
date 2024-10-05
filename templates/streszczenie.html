@@ -98,6 +98,11 @@
                 {Cel eksperymentu; Po co?}
             </h2>
             <h3>
+                {% if experiment_goal %}
+                    <div>
+                        {{ experiment_goal }}
+                    </div>
+                {% endif %}
                 Sprawdzenie, czy szczury lubią mountain dew.
             </h3>
         </div>
@@ -107,6 +112,11 @@
                 Rozmiar badanej grupy:
             </h2>
             <h3>
+                {% if experiment_group_kind %}
+                    <div>
+                        {{ experiment_group_kind }}
+                    </div>
+                {% endif %}
                 Grupa liczyła 69 szczurów
             </h3>
         </div>
