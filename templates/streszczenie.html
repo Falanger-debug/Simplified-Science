@@ -70,7 +70,7 @@
     <div class="title">
         <h1 style="margin-top: 15px;">
             {Tytuł Artykułu}
-            {% if link %}
+            {% if title %}
             <div>
                 <a href="{{ title }}" target="_blank">{{ title }}</a>
             </div>
@@ -84,7 +84,7 @@
                Obiekt testowy:
             </h2>
             <h3>
-                {% if link %}
+                {% if test_object %}
                 <div>
                     <a href="{{ test_object }}" target="_blank">{{ test_object }}</a>
                 </div>
