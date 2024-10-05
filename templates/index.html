@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            flex-direction: column;
+            background-color: rgb(50, 54, 57);
+            gap:50px;
+
+            font-family: 'Roboto', sans-serif; /* Ustawienie Roboto dla całej strony */
+        }
+        input {
+            width: 500px;
+            height: 50px;
+            border-radius: 100px 0px 0px 100px;
+            border: none;
+            padding: 5px 25px;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Jasny cień */
+
+            font-size: large;
+        }
+        input:focus {
+            outline: none; /* Usunięcie domyślnego obramowania */
+            border-color: #66afe9; /* Zmiana koloru obramowania */
+            animation: glow 0.5s forwards; /* Animacja narastającego świecenia */
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Początkowy brak cienia */
+            }
+            100% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Większy cień */
+            }
+        }
+
+        button {
+            display: inline-block;
+            padding: 20px 23px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            border: none;
+            border-radius: 0px 100px 100px 0px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button .arrow {
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        button:hover .arrow {
+            transform: translateX(10px); /* Przesuwanie strzałki w prawo */
+        }
+
+        button:active {
+            transform: scale(0.9); /* Delikatny efekt naciśnięcia */
+        }
+
+        .wyszukiwarka {
+            display: flex;
+            align-items: center;
+        }
+        .tytul {
+            font-size: 50px;
+            color: white;
+            margin-right: 20px;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease; /* Płynne przejście koloru */
+        }
+
+        .highlight {
+            color: rgb(37, 117, 252); /* Kolor dla środkowego słowa */
+            text-shadow: 2px 2px 4px rgba(102, 145, 219, 0.3); /* Cień tekstu */
+        }
+    </style>
+</head>
+<body>
+    <div class="tytul">
+        Make <span class="highlight">Education</span> Easier
+    </div>
+    <div class="wyszukiwarka">
+        <input type="text" placeholder="Paste link here">
+        <button onclick="window.location.href='streszczenie.html'">
+            <i class="fas fa-arrow-right arrow"></i>
+        </button>
+    </div>
+
+</body>
+</html>
