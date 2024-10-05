@@ -19,7 +19,7 @@ def home():
         experiment_result = "Sztywny wynik eksperymentu"
         experiment_conclusions = "Sztywne wnioski z eksperymentu"
 
-        #title = appAPI.getTitle(link)
+        title = appAPI.getTitle(link)
         #test_object = appAPI.getTestObject(link)
         #experiment_goal = appAPI.getExperimentGoal(link)
         #experiment_group_kind = appAPI.getExperimentGroupKind(link)
