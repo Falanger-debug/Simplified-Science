@@ -8,9 +8,11 @@ def home():
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
 
+        # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge)
 
-    return render_template('index.html')  # Renderuj index.html przy GET
+    # Przy metodzie GET wyświetlaj index.html
+    return render_template('index.html')
 
 @app.route('/streszczenie', methods=['POST'])
 def about():
