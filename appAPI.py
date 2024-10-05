@@ -46,7 +46,7 @@ def getTestObject(link):
     response = chat_session.send_message(prompt + link)
     return response.text
 
-def getExperimentGoal():
+def getExperimentGoal(link):
     prompt = "Tell me what the experiment goal is"
 
     response = chat_session.send_message(prompt + link)
