@@ -9,7 +9,7 @@ def home():
     if request.method == 'POST':
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
-        title= "Sztywny tytuł artykułu"
+        title = "Sztywny tytuł artykułu"
         test_object = "Sztywny test_object"
         experiment_goal = "Sztywny cel eksperymentu"
         experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
