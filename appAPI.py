@@ -34,43 +34,48 @@ chat_session = model.start_chat(
     ]
 )
 
-def getTitle(link, promptAddition):
+def getTitle(link):
     prompt = "Tell me what the title of the article is."
+    promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getTestObject(link, promptAddition):
+def getTestObject(link):
     prompt = "Tell me what the test object is."
+    promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGoal(link, promptAddition):
+def getExperimentGoal(link):
     prompt = "Tell me what the experiment goal is."
+    promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGroupKind(link, promptAddition):
+def getExperimentGroupKind(link):
     prompt = "Tell me what the experiment group kind is."
+    promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGroupKind(link, promptAddition):
+def getExperimentGroupKind(link):
     prompt = "Tell me what the experiment group kind is."
+    promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGoal(link, promptAddition):
+def getExperimentGoal(link):
     prompt = "Tell me what the goal of experiment is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentEnvironment(link, promptAddition):
+def getExperimentEnvironment(link):
     prompt = "Tell me what the goal of experiment is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
