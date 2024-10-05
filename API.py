@@ -45,3 +45,9 @@ print("----------------------------3-------------------------------")
 
 print(chat_session)
 print("----------------------------4-------------------------------")
+
+def getTitle(link):
+  prompt = "Tell me what the title of the article is. Just the title based on this AND ONLY THIS! link. I need just the title. Don't write 'The title of this article is THE_TITLE', just 'THE_TITLE'. Be honest."
+
+  response = chat_session.send_message(prompt + link)
+  return response.text
