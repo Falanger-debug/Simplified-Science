@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+import appAPI
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ def home():
         object_effect = "Sztywny efekt obiektu"
         experiment_result = "Sztywny wynik eksperymentu"
         experiment_conclusions = "Sztywne wnioski z eksperymentu"
-        #title = API.getTitle(link)
+        title = appAPI.getTitle(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
