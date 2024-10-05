@@ -4,13 +4,12 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    link = None  # Inicjalizujemy link jako None
     if request.method == 'POST':
-        link = request.form['link']  # Odbieramy wartość z formularza
-
+        link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         return render_template('streszczenie.html', link=link)
 
-    return render_template('index.html')  # Przekazujemy link do szablonu  
+    return render_template('index.html')  # Renderuj index.html przy GET
+
 
 @app.route('/streszczenie', methods=['POST'])
 def about():
