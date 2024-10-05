@@ -126,6 +126,11 @@
                 Środowisko eksperymentu:
             </h2>
             <h3>
+                {% if experiment_environment %}
+                    <div>
+                        {{ experiment_environment }}
+                    </div>
+                {% endif %}
                 Środowiskiem eskperymentu była komora antygrawitacyjna.
             </h3>
         </div>
@@ -135,6 +140,11 @@
                 Jaką metodą przeprowadzano badanie:
             </h2>
             <h3>
+                {% if experiment_method %}
+                    <div>
+                        {{ experiment_method }}
+                    </div>
+                {% endif %}
                 Metodą prób i błędów Gaussa.
             </h3>
         </div>
@@ -144,6 +154,11 @@
                 Jak eksperyment wpłynął na obiekt testowany?
             </h2>
             <h3>
+                {% if object_effect %}
+                    <div>
+                        {{ object_effect }}
+                    </div>
+                {% endif %}
                 Szczury uzależniły się od mountain dew.
             </h3>
         </div>
@@ -153,6 +168,11 @@
                 Wyniki eksperymentu:
             </h2>
             <h3>
+                {% if experiment_result %}
+                    <div>
+                        {{ experiment_result }}
+                    </div>
+                {% endif %}
                 90% szczurów bardzo lubi mountain dew.
             </h3>
         </div>
@@ -162,6 +182,11 @@
                 Wnioski:
             </h2>
             <h3>
+                {% if experiment_conclusions %}
+                <div>
+                    {{ experiment_conclusions }}
+                </div>
+                {% endif %}
                 Szczury wydają się kochać słodkie napoje.
             </h3>
         </div>
