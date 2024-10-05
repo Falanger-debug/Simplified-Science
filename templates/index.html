@@ -98,13 +98,14 @@
         Make <span class="highlight">Education</span> Easier
     </div>
     <div class="wyszukiwarka">
-        <input type="text" name="link" placeholder="Paste link here">
-        <form action="/streszczenie" method="POST">
+        <form action="/" method="POST"> <!-- Upewnij się, że akcja jest na '/' -->
+            <input type="text" name="link" placeholder="Paste link here" required>
             <button type="submit">
                 <i class="fas fa-arrow-right arrow"></i>
             </button>
         </form>
     </div>
+    
 
     {% if link %}
     <div class="link-display">
