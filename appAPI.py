@@ -35,7 +35,7 @@ chat_session = model.start_chat(
 )
 
 def getTitle(link):
-    prompt = "Tell me what the title of the article is. Just the title based on this AND ONLY THIS! link. I need just the title. Don't write 'The title of this article is THE_TITLE', just 'THE_TITLE'. Be honest."
+    prompt = "Tell me what the title of the article is. Be honest"
 
     # Send the message and get the response
     response = chat_session.send_message(prompt + link)
