@@ -34,12 +34,11 @@ chat_session = model.start_chat(
     ]
 )
 
-promptCorrect = "Nie wypisuj znaków specjalnych. Musisz być pewny, postaraj się."
 
 def getTitle(link):
-    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
+    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł.Nie wypisuj znaków specjalnych. Musisz być pewny, postaraj się."
 
-    response = chat_session.send_message(prompt + promptCorrect + link)
+    response = chat_session.send_message(prompt + link)
     return response.text
 
 def getTestObject(link):
