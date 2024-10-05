@@ -73,19 +73,20 @@
             flex-direction: column;
             background: rgb(9,9,9);
             background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(19,19,19,1) 100%);
-            font-family: 'SF Pro Display', sans-serif;
+            font-family: "SF Pro Display", sans-serif;
             position: relative;
             overflow: hidden;
+            gap: 25px;
         }
 
         input {
             width: 500px;
             height: 50px;
-            border-radius: 100px 0px 0px 100px;
             border: none;
             padding: 5px 25px;
             font-size: large;
             vertical-align: middle; /* Add this */
+            border-radius: 100px 0 0 100px;
         }
 
         input:focus {
@@ -120,7 +121,6 @@
 
         button:hover {
             background: linear-gradient(90deg, rgba(57,65,157,1), rgba(57,65,157,1));
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         button .arrow {
@@ -145,7 +145,7 @@
             color: white;
             margin-right: 20px;
             font-weight: 900;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
             transition: color 0.3s ease; /* Płynne przejście koloru */
         }
@@ -159,6 +159,32 @@
         .wybor-opcji {
             color:white;
         }
+
+        .poziom-wiedzy {
+            display: inline-block;
+            padding: 19.5px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(50,50,50,1) 100%);
+            border: none;
+            border-radius: 100px 0 0 100px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            vertical-align: middle; /* Add this */
+        }
+
+        select {
+            padding: 10.5px 30px;
+            outline: none;
+            border: none;
+            text-align: center;
+            height: 100%;
+            border-radius: 0 100px 100px 0 ;
+            margin-right: 25px;
+        }
     </style>
 </head>
 <body>
@@ -166,16 +192,18 @@
         Make <span class="highlight">Education</span> Easier
     </div>
     <div class="wyszukiwarka">
-        <form style="height: 60px;" action="/" method="POST"> <!-- Upewnij się, że akcja jest na '/' -->
-            <label for="poziom-wiedzy">Poziom wiedzy:</label>
-            <select id="poziom-wiedzy" name="poziom-wiedzy">
-                <option value="znikomy">Znikomy</option>
-                <option value="niski">Niski</option>
-                <option value="sredni">Średni</option>
-                <option value="zaawansowany">Zaawansowany</option>
-            </select>
-            <input type="text" name="link" placeholder="Paste link here" required>
-            <button style="height: 60px;" type="submit">
+        <form style="height: 60px;" action="/" method="POST">
+            <container class="poziom-wiedzy">
+                <label for="poziom-wiedzy">Wiedza:</label>
+            </container><!--
+             --><select id="poziom-wiedzy" name="poziom-wiedzy">
+                    <option value="znikomy">Znikomy</option>
+                    <option value="niski">Niski</option>
+                    <option value="sredni">Średni</option>
+                    <option value="zaawansowany">Zaawansowany</option>
+                </select>
+            <input type="text" name="link" placeholder="Paste link here" required><!--
+            --><button style="height: 60px;" type="submit">
                 <i class="fas fa-arrow-right arrow"></i>
             </button>
         </form>
