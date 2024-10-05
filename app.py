@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/streszczenie')
+@app.route('/streszczenie', methods=['POST'])
 def about():
     return render_template('streszczenie.html')
 
