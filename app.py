@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import appAPI
+
 
 app = Flask(__name__)
 
@@ -21,7 +21,13 @@ def home():
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
-                               test_object=test_object, experiment_goal=experiment_goal)
+                               test_object=test_object, experiment_goal=experiment_goal,
+                               experiment_group_kind=experiment_group_kind,
+                               experiment_environment=experiment_environment,
+                               experiment_method=experiment_method,
+                               object_effect=object_effect,
+                               experiment_result=experiment_result,
+                               experiment_conclusions=experiment_conclusions)
 
     # Przy metodzie GET wyświetlaj index.html
     return render_template('index.html')
