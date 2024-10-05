@@ -4,28 +4,90 @@
     <title>Moja Strona</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 100;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Ultralight.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 200;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Thin.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 300;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Light.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Regular.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 500;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Medium.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 600;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-SemiBold.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 700;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Bold.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 800;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Black.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 900;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Heavy.ttf");
+        }
+
         body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
             flex-direction: column;
-            background-color: rgb(50, 54, 57);
-            gap:50px;
-
-            font-family: 'Roboto', sans-serif; /* Ustawienie Roboto dla całej strony */
+            background: rgb(9,9,9);
+            background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(19,19,19,1) 100%);
+            font-family: 'SF Pro Display', sans-serif;
+            position: relative;
+            overflow: hidden;
         }
+
         input {
             width: 500px;
             height: 50px;
             border-radius: 100px 0px 0px 100px;
             border: none;
             padding: 5px 25px;
-            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Jasny cień */
-
             font-size: large;
+            vertical-align: middle; /* Add this */
         }
+
         input:focus {
             outline: none; /* Usunięcie domyślnego obramowania */
             border-color: #66afe9; /* Zmiana koloru obramowania */
@@ -46,17 +108,18 @@
             font-size: 18px;
             font-weight: bold;
             color: white;
-            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            background: linear-gradient(0deg, rgba(57,65,157,1) 0%, rgba(88,101,242,1) 100%);
             border: none;
             border-radius: 0px 100px 100px 0px;
             cursor: pointer;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            vertical-align: middle; /* Add this */
         }
 
         button:hover {
-            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            background: linear-gradient(90deg, rgba(57,65,157,1), rgba(57,65,157,1));
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
@@ -66,7 +129,7 @@
         }
 
         button:hover .arrow {
-            transform: translateX(10px); /* Przesuwanie strzałki w prawo */
+            transform: scaleX(80%) scaleY(80%); /* Przesuwanie strzałki w prawo */
         }
 
         button:active {
@@ -88,8 +151,9 @@
         }
 
         .highlight {
-            color: rgb(37, 117, 252); /* Kolor dla środkowego słowa */
-            text-shadow: 2px 2px 4px rgba(102, 145, 219, 0.3); /* Cień tekstu */
+            background: -webkit-linear-gradient(0deg, rgba(88,101,242,1) 0%, rgba(57,65,157,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
@@ -98,9 +162,9 @@
         Make <span class="highlight">Education</span> Easier
     </div>
     <div class="wyszukiwarka">
-        <form action="/" method="POST"> <!-- Upewnij się, że akcja jest na '/' -->
+        <form style="height: 60px;" action="/" method="POST"> <!-- Upewnij się, że akcja jest na '/' -->
             <input type="text" name="link" placeholder="Paste link here" required>
-            <button type="submit">
+            <button style="height: 60px;" type="submit">
                 <i class="fas fa-arrow-right arrow"></i>
             </button>
         </form>
