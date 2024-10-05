@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ def home():
     if request.method == 'POST':
         link = request.form['link']  # Odbieramy wartość z formularza
         return render_template('streszczenie.html')  # Przekazujemy link do szablonu  
-        
+
     return render_template('index.html')  # Przekazujemy link do szablonu  
 
 @app.route('/streszczenie', methods=['POST'])
