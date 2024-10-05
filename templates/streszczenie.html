@@ -70,7 +70,11 @@
     <div class="title">
         <h1 style="margin-top: 15px;">
             {Tytuł Artykułu}
-            Wpływ mountain dew na szczury
+            {% if link %}
+            <div>
+                Odebrany poziom: <a href="{{ title }}" target="_blank">{{ title }}</a>
+            </div>
+            {% endif %}
         </h1>
     </div>
     
