@@ -98,13 +98,18 @@
         Make <span class="highlight">Education</span> Easier
     </div>
     <div class="wyszukiwarka">
-        <input type="text" placeholder="Paste link here">
+        <input type="text" name="link" placeholder="Paste link here">
         <form action="/streszczenie" method="POST">
             <button type="submit">
                 <i class="fas fa-arrow-right arrow"></i>
             </button>
         </form>
     </div>
-
+    
+    {% if link %}
+    <div class="link-display">
+        Odebrany link: <a href="{{ link }}" target="_blank">{{ link }}</a>
+    </div>
+    {% endif %}
 </body>
 </html>
