@@ -3,12 +3,69 @@
 <head>
     <title>Moja Strona</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 100;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Ultralight.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 200;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Thin.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 300;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Light.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Regular.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 500;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Medium.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 600;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-SemiBold.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 700;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Bold.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 800;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Black.ttf");
+        }
+        @font-face {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 900;
+        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Heavy.ttf");
+        }
+
         body {
-            background-color: rgb(50, 54, 57);
+            background: rgb(9,9,9);
+            background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(19,19,19,1) 100%);
             color: white;
-            font-family: 'Roboto', sans-serif; /* Ustawienie Roboto dla całej strony */
+            font-family: 'SF Pro Display', sans-serif;
         }
 
         h1 {
@@ -21,6 +78,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .informacje {
@@ -28,6 +86,8 @@
             flex-direction: column;
             gap: 50px;
             padding: 20px;
+            max-width: 1300px; /* Dodaj to */
+            margin: 0 auto; /* Dodaj to */
         }
         .go-back-button {
             display:flex;
@@ -40,12 +100,31 @@
             border:none;
             border-radius: 5px;
             margin-top:15px;
-            mergin-left:10px;
+            margin-left:10px;
         }
         .go-back-button:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
         
+        .para {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            outline: 1px solid rgba(255, 255, 255, 0.20);
+            border-radius: 20px;
+        }
+
+        h2, h3 {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+
+        h3 {
+            margin: 15px 0 0 0 ;
+        }
+
+        h2 {
+            font-weight: 900;
+        }
     </style>
 </head>
 <body>
