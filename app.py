@@ -18,13 +18,15 @@ def home():
         object_effect = "Sztywny efekt obiektu"
         experiment_result = "Sztywny wynik eksperymentu"
         experiment_conclusions = "Sztywne wnioski z eksperymentu"
-        
-        title = appAPI.getTitle(link)
-        test_object = appAPI.getTestObject(link)
-        experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_group_kind = appAPI.getExperimentGroupKind(link)
-        #experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_environment = appAPI.getExperimentEnvironment(link)
+
+        promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
+
+        title = appAPI.getTitle(link, promptAddition)
+        test_object = appAPI.getTestObject(link, promptAddition)
+        experiment_goal = appAPI.getExperimentGoal(link, promptAddition)
+        #experiment_group_kind = appAPI.getExperimentGroupKind(link, promptAddition)
+        #experiment_goal = appAPI.getExperimentGoal(link, promptAddition)
+        #experiment_environment = appAPI.getExperimentEnvironment(link, promptAddition)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,

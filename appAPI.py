@@ -34,45 +34,43 @@ chat_session = model.start_chat(
     ]
 )
 
-promptAddition = 'Are you sure? Write me only the thing i want. Do not write any special characters here'
-
-def getTitle(link):
+def getTitle(link, promptAddition):
     prompt = "Tell me what the title of the article is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getTestObject(link):
+def getTestObject(link, promptAddition):
     prompt = "Tell me what the test object is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGoal(link):
+def getExperimentGoal(link, promptAddition):
     prompt = "Tell me what the experiment goal is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGroupKind(link):
+def getExperimentGroupKind(link, promptAddition):
     prompt = "Tell me what the experiment group kind is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGroupKind(link):
+def getExperimentGroupKind(link, promptAddition):
     prompt = "Tell me what the experiment group kind is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentGoal(link):
+def getExperimentGoal(link, promptAddition):
     prompt = "Tell me what the goal of experiment is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
     return response.text
 
-def getExperimentEnvironment(link):
+def getExperimentEnvironment(link, promptAddition):
     prompt = "Tell me what the goal of experiment is."
 
     response = chat_session.send_message(prompt + link + promptAddition)
