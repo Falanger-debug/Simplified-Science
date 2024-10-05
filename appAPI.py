@@ -37,6 +37,11 @@ chat_session = model.start_chat(
 def getTitle(link):
     prompt = "Tell me what the title of the article is. Be honest"
 
-    # Send the message and get the response
+    response = chat_session.send_message(prompt + link)
+    return response.text
+
+def getTestObject(link):
+    prompt = "Tell me what the test object is"
+
     response = chat_session.send_message(prompt + link)
     return response.text
