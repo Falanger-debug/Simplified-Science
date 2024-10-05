@@ -6,7 +6,9 @@ app = Flask(__name__)
 def home():
     if request.method == 'POST':
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
-        return render_template('streszczenie.html', link=link)
+        knowledge = request.form.get('wybor-opcji')
+
+        return render_template('streszczenie.html', link=link, knowledge=knowledge)
 
     return render_template('index.html')  # Renderuj index.html przy GET
 
