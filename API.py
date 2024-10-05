@@ -30,22 +30,6 @@ chat_session = model.start_chat(
   ]
 )
 
-response = chat_session.send_message("https://osdr.nasa.gov/bio/repo/data/studies/OSD-379 Hello, here I have results of an experiment performed on mice aboard ISS. Could You explain me in detail what are the results of this experiment and how did the 'test bench' look like")
-print(response.text)
-print("----------------------------1-------------------------------")
-
-response = chat_session.send_message("Are you sure?")
-print(response.text)
-print("----------------------------2-------------------------------")
-
-
-response = chat_session.send_message("Ok. Can You also tell me more about the genes that were subjected to the analysis?")
-print(response.text)
-print("----------------------------3-------------------------------")
-
-print(chat_session)
-print("----------------------------4-------------------------------")
-
 def getTitle(link):
   prompt = "Tell me what the title of the article is. Just the title based on this AND ONLY THIS! link. I need just the title. Don't write 'The title of this article is THE_TITLE', just 'THE_TITLE'. Be honest."
 
