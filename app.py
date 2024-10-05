@@ -7,7 +7,7 @@ def home():
     link = None  # Inicjalizujemy link jako None
     if request.method == 'POST':
         link = request.form['link']  # Odbieramy wartość z formularza
-    return render_template('index.html', link=link)  # Przekazujemy link do szablonu    
+    return render_template('index.html', link=link)  # Przekazujemy link do szablonu  
 
 @app.route('/streszczenie', methods=['POST'])
 def about():
