@@ -51,3 +51,27 @@ def getExperimentGoal(link):
 
     response = chat_session.send_message(prompt + link)
     return response.text
+
+def getExperimentGroupKind(link):
+    prompt = "Tell me what the experiment group kind is"
+
+    response = chat_session.send_message(prompt + link)
+    return response.text
+
+def getExperimentGroupKind(link):
+    prompt = "Tell me what the experiment group kind is"
+
+    response = chat_session.send_message(prompt + link)
+    return response.text
+
+def getExperimentGoal(link):
+    prompt = "Tell me what the goal of experiment is"
+
+    response = chat_session.send_message(prompt + link)
+    return response.text
+
+def getExperimentEnvironment(link):
+    prompt = "Tell me what the goal of experiment is"
+
+    response = chat_session.send_message(prompt + link)
+    return response.text
