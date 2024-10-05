@@ -10,7 +10,6 @@ def home():
 
     return render_template('index.html')  # Renderuj index.html przy GET
 
-
 @app.route('/streszczenie', methods=['POST'])
 def about():
     return render_template('streszczenie.html')
