@@ -53,7 +53,7 @@ def chat_message():
     #message = request.form['message']
     #response = appAPI.askChat(message)
     #return jsonify({'response': response})
-    return jsonify({'response': 'Odpowiedź na pytanie'})
+    return jsonify({'response': 'ERROR 500: API DOWN'})
 
 if __name__ == '__main__':
     app.run(debug=True)
