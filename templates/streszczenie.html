@@ -474,39 +474,51 @@
         });
 
         document.getElementById('chatForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Zatrzymanie domyślnego działania formularza
+    event.preventDefault(); // Zatrzymanie domyślnego działania formularza
 
-            const formData = new FormData(this);
-            const messageInput = formData.get('message');
+    const formData = new FormData(this);
+    const messageInput = formData.get('message');
 
-            // Tworzenie nowej wiadomości
-            const newMessage = document.createElement('div');
-            newMessage.classList.add('message-wrapper');
-            newMessage.innerHTML = `
+    // Tworzenie nowej wiadomości
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message-wrapper');
+    newMessage.innerHTML = `
+        <div class="profile_icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="chat_message">
+            ${messageInput} <!-- Wyświetlenie wiadomości od użytkownika -->
+        </div>
+    `;
+
+        // Dodanie nowej wiadomości do kontenera wiadomości
+        document.getElementById('messageContainer').appendChild(newMessage);
+        
+        // Wysłanie wiadomości do backendu
+        fetch('/chat_message', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Dodanie odpowiedzi od backendu do kontenera wiadomości
+            const responseMessage = document.createElement('div');
+            responseMessage.classList.add('message-wrapper');
+            responseMessage.innerHTML = `
                 <div class="profile_icon">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="chat_message">
-                    ${messageInput} <!-- Wyświetlenie wiadomości od użytkownika -->
+                    ${data.response} <!-- Odpowiedź z backendu -->
                 </div>
             `;
-
-            // Dodanie nowej wiadomości do kontenera wiadomości
-            document.getElementById('messageContainer').appendChild(newMessage);
             
-            // Wysłanie wiadomości do backendu
-            fetch('/chat_message', {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Zaktualizowanie wiadomości w czacie
-                const chatMessageElement = document.getElementById('chatMessage');
-                chatMessageElement.innerText = data.response; // Ustawienie odpowiedzi z backendu
-            })
-            .catch(error => console.error('Error:', error));
-        });
+            // Dodanie odpowiedzi do kontenera wiadomości
+            document.getElementById('messageContainer').appendChild(responseMessage);
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
 
     </script>
 </body>
