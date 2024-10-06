@@ -47,9 +47,9 @@ def about():
 def chat_message():
     message = request.form['message']
 
-    response_message = appAPI.chat_session.send_message(message).text
+    response = appAPI.askChat(message)
 
-    return jsonify({'response': response_message})
+    return jsonify({'response': response})
 
 if __name__ == '__main__':
     app.run(debug=True)
