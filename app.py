@@ -43,5 +43,9 @@ def home():
 def about():
     return render_template('streszczenie.html')
 
+@app.route('/chat_message', methods=['GET'])
+def chatMessage():
+    return "DOSTALEM WIADOMOSC OD CHATU"
+
 if __name__ == '__main__':
     app.run(debug=True)
