@@ -254,6 +254,45 @@
             border-radius: 100%;
         }
 
+        .close-chat {
+            height: 100%;
+            display: flex;
+            align-self: flex-end;
+            justify-content: flex-end;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .small-chat {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.1);
+            justify-content: flex-end;
+
+            position: fixed;
+            bottom: 0;
+            right: 0;
+
+            width:60px;
+            height: 60px;
+
+            border-radius: 20px;
+            margin:20px;
+
+            box-sizing: border-box;
+            cursor: pointer;
+
+        }
+        
+        .open-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -263,7 +302,15 @@
         </button>
     </form>
     
-    <div class="chat">
+    <div class="small-chat" id="small-chat">
+        <div class="open-icon">
+            <i class="fas fa-comment-alt fa-2x"></i>
+        </div>
+    </div>
+    <div id="chat" class="chat">
+        <div class="close-chat">
+            <i class="fas fa-times" style="font-size: 30px; color: rgba(255, 255, 255, 0.1);"></i>
+        </div>
         <div class="message-wrapper">
             <div class="profile_icon">
                 <i class="fas fa-user"></i>
@@ -407,5 +454,24 @@
             </h3>
         </div>
     </div>
+
+    <script>
+        // Funkcja do ukrywania czatu
+        document.querySelector('.close-chat').addEventListener('click', function() {
+            var chat = document.getElementById('chat');
+            chat.style.display = 'none'; // Ukryj czat
+
+            var smallChat = document.getElementById('small-chat');
+            smallChat.style.display = 'block'; // Ukryj czat
+        });
+
+        document.querySelector('.small-chat').addEventListener('click', function() {
+            var smallChat = document.getElementById('small-chat');
+            smallChat.style.display = 'none'; // Ukryj czat
+
+            var chat = document.getElementById('chat');
+            chat.style.display = 'flex'; // Ukryj czat
+        });
+    </script>
 </body>
 </html>
