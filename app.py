@@ -45,9 +45,10 @@ def about():
 
 @app.route('/chat_message', methods=['POST'])
 def chat_message():
-    message = request.form['message']  # Pobranie wiadomości z formularza
-    # Możesz przetworzyć wiadomość lub wykonać jakąś logikę, np. odpowiedzieć
-    response_message = f"Odpowiedź na: {message}"  # Przykładowa odpowiedź
+    message = request.form['message']
+
+    response_message = appAPI.chat_session.send_message(message)
+
     return jsonify({'response': response_message})
 
 if __name__ == '__main__':
