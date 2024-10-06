@@ -20,8 +20,8 @@ def home():
         experiment_result = "Experiment result"
         experiment_conclusions = "Experiment conclusions"
 
-        title = appAPI.getTitle(link)
-        test_object = appAPI.getTestObject(link)
+        #title = appAPI.getTitle(link)
+        #test_object = appAPI.getTestObject(link)
         #experiment_goal = appAPI.getExperimentGoal(link)
         #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
         #experiment_environment = appAPI.ExperimentEnvironment(link)
