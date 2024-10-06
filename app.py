@@ -43,10 +43,10 @@ def home():
 def about():
     return render_template('streszczenie.html')
 
-@app.route('/chat_message', methods=['GET', 'POST'])
+@app.route('/chat_message', methods=['GET'])
 def chatMessage():
-    #message = request.form.get('message')  # Użyj get() dla bezpieczeństwa
-    return "DOSTALEM WIADOMOSC OD CHATU"
+    message = request.form.get('message')  # Użyj get() dla bezpieczeństwa
+    return "DOSTALEM WIADOMOSC OD CHATU" + message
 
 if __name__ == '__main__':
     app.run(debug=True)
