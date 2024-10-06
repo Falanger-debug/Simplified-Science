@@ -331,13 +331,13 @@
                 </div>
             </div>
             <div id="messageContainer"></div> <!-- Kontener na wiadomości -->
-            <form style="height: 60px;" action="/chat_message" method="POST">
-                <input type="text" name="message" placeholder="Paste link here" required>
-                <button class="button-chat" style="height: 60px;" type="submit">
-                    <i class="fas fa-arrow-right arrow"></i>
-                </button>
-            </form>
         </div>
+        <form style="height: 60px;" action="/chat_message" method="POST">
+            <input type="text" name="message" placeholder="Paste link here" required>
+            <button class="button-chat" style="height: 60px;" type="submit">
+                <i class="fas fa-arrow-right arrow"></i>
+            </button>
+        </form>
     </div>
 
     {% if link %}
