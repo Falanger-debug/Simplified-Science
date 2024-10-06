@@ -87,9 +87,9 @@ Wnioski z eksperymentu Rodent Research Reference Mission (RRRM-1) sugerują, że
    Myszy, które spędziły 40 dni w mikrograwitacji, wykazywały zdolność do pewnej adaptacji, ale proces regeneracji po powrocie na Ziemię trwał 2 dni, co może wskazywać na długotrwały wpływ lotu kosmicznego na organizmy. Zdolność do adaptacji do warunków grawitacyjnych po długim czasie w mikrograwitacji wymaga dalszych badań.
 """
 
-        #title = appAPI.getTitle(link)
-        #test_object = appAPI.getTestObject(link)
-        #experiment_goal = appAPI.getExperimentGoal(link)
+        title = appAPI.getTitle(link)
+        test_object = appAPI.getTestObject(link)
+        experiment_goal = appAPI.getExperimentGoal(link)
         #experiment_group_kind = appAPI.getExperimentGroupKind(link)
         #experiment_goal = appAPI.getExperimentGoal(link)
         #experiment_environment = appAPI.getExperimentEnvironment(link)
