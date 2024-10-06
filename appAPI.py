@@ -54,5 +54,7 @@ def getExperimentGoal(link):
     return response.text
 
 def askChat(message):
-    response = chat_session.send_message(message)
+    prompt = "mam pytanie."
+
+    response = chat_session.send_message(prompt + message)
     return response.text
