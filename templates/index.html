@@ -5,62 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     <style>
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 100;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Ultralight.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 200;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Thin.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 300;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Light.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 400;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Regular.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 500;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Medium.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 600;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-SemiBold.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 700;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Bold.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 800;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Black.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 900;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Heavy.ttf");
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -70,7 +16,6 @@
             align-items: center;
             flex-direction: column;
             background: rgb(9,9,9);
-            background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(19,19,19,1) 100%);
             font-family: "SF Pro Display", sans-serif;
             position: relative;
             overflow: hidden;
@@ -107,7 +52,7 @@
             font-size: 18px;
             font-weight: bold;
             color: white;
-            background: linear-gradient(0deg, rgba(57,65,157,1) 0%, rgba(88,101,242,1) 100%);
+            background: linear-gradient(0deg, #073fa7 0%, #0960ff 100%);
             border: none;
             border-radius: 0px 100px 100px 0px;
             cursor: pointer;
@@ -118,7 +63,7 @@
         }
 
         button:hover {
-            background: linear-gradient(90deg, rgba(57,65,157,1), rgba(57,65,157,1));
+            background: linear-gradient(90deg, #073180 0%, #073180 100%);
         }
 
         button .arrow {
@@ -142,14 +87,14 @@
             font-size: 50px;
             color: white;
             margin-right: 20px;
-            font-weight: 900;
+            font-weight: 700;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             transition: color 0.3s ease; /* Płynne przejście koloru */
         }
 
         .highlight {
-            background: -webkit-linear-gradient(0deg, rgba(88,101,242,1) 0%, rgba(57,65,157,1) 100%);
+            background: -webkit-linear-gradient(0deg, #0960ff 0%, #073fa7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -164,10 +109,9 @@
             font-size: 18px;
             font-weight: 700;
             color: white;
-            background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(50,50,50,1) 100%);
+            background: #2a2a2a;
             border: none;
             border-radius: 100px 0 0 100px;
-            cursor: pointer;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -184,17 +128,68 @@
             margin-right: 25px;
         }
 
+        .knur_wrapper {
+            position:absolute;
+            bottom:15%;
+            right:6%;
+            pointer-events: none;
+        }
+
         .knur {
             width:300px;
         }
 
-        .knur_wrapper {
-            position:absolute;
-            bottom:15%;
-            right:11%;
-            pointer-events: none;
-        }
+        select {
 
+            /* styling */
+            background-color: white;
+            border-radius: 0 30px 30px 0;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 4.5em 0.5em 1.5em;
+
+            /* reset */
+
+            margin: 0 25px 0 0;      
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            }
+
+
+            /* arrows */
+
+            select.classic {
+            background-image: url('https://i.imgur.com/BbsvFjc.png');
+            background-position: 
+            calc(100% - 10px) calc(0em + 10px),
+            calc(100% - 15px) calc(1em + 2px),
+            100% 0;
+            background-size:
+            40px 40px,
+            40px 40px,
+            2.5em 2.5em;
+            background-repeat: no-repeat;
+            }
+
+            select.classic:focus {
+            background-image: url('https://i.imgur.com/jem4GLD.png');
+            background-position: 
+            calc(100% - 10px) calc(0em + 10px),
+            calc(100% - 15px) calc(1em + 2px),
+            100% 0;
+            background-size:
+            40px 40px,
+            40px 40px,
+            2.5em 2.5em;
+            background-repeat: no-repeat;
+            border-color: grey;
+            outline: 0;
+            transition: background-image 0.5s ease; /* Dodajemy płynne przejście */
+            }
     </style>
 </head>
 <body>
@@ -204,19 +199,30 @@
     <div class="wyszukiwarka">
         <form style="height: 60px;" action="/" method="POST">
             <container class="poziom-wiedzy">
-                <label for="poziom-wiedzy">Wiedza:</label>
-            </container>
-             <select id="poziom-wiedzy" name="poziom-wiedzy">
-                    <option value="znikomy">Znikoma</option>
-                    <option value="niski">Niska</option>
-                    <option value="sredni">Średnia</option>
-                    <option value="zaawansowany">Zaawansowana</option>
-                </select>
-            <input type="text" name="link" placeholder="Paste link here" required>
-            <button style="height: 60px;" type="submit">
+                <label for="poziom-wiedzy">Knowledge:</label>
+            </container><!--
+             --><select id="poziom-wiedzy" class="classic" name="poziom-wiedzy">
+                    <option disabled selected value>Select opti on</option>
+                    <option value="znikomy">Negligible </option>
+                    <option value="niski">Low</option>
+                    <option value="sredni">Average</option>
+                    <option value="zaawansowany">Advanced</option>
+                </select>   
+            <input type="text" name="link" placeholder="Paste link here" required><!--
+        --><button style="height: 60px;" type="submit">
                 <i class="fas fa-arrow-right arrow"></i>
             </button>
         </form>
+        <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 150%;
+            height: auto;
+            opacity: 0.5;
+          " />
     </div>
     <div class="knur_wrapper">
         <img src="https://i.imgur.com/lPKXehN.png" alt="Obrazek knura" class="knur" />

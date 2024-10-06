@@ -300,6 +300,14 @@
         background-color: #777; /* Kolor kciuka przy najechaniu myszką */
     }
 
+    .pasek-aktywnosci {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 200px;
+    }
+
     </style>
 </head>
 <body>
@@ -359,6 +367,10 @@
         </h1>
     </div>
 
+    <div class="pasek-aktywnosci">
+        DUPADUPA
+    </div>
+
     <div class="informacje">
         <div class="para" style="position: relative">
             <div style="display: flex; gap: 15px">
@@ -369,7 +381,7 @@
             <h3>
                 {% if test_object %}
                 <div>{{ test_object }}</div>
-                {% endif %} Obiektem testowym jest rudy szczur.
+                {% endif %}
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -385,12 +397,12 @@
             <div style="display: flex; gap: 15px">
                 <img style="width: 35px; height: 35px"
                     src="https://img.icons8.com/?size=100&id=79605&format=png&color=ffffff" />
-                <h2>{Cel eksperymentu; Po co?}</h2>
+                <h2>Cel eksperymentu</h2>
             </div>
             <h3>
                 {% if experiment_goal %}
                 <div>{{ experiment_goal }}</div>
-                {% endif %} Sprawdzenie, czy szczury lubią mountain dew.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -402,7 +414,7 @@
             <h3>
                 {% if experiment_group_kind %}
                 <div>{{ experiment_group_kind }}</div>
-                {% endif %} Grupa liczyła 69 szczurów.
+                {% endif %} Grupa liczyła 40 szczurów
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -414,7 +426,7 @@
             <h3>
                 {% if experiment_environment %}
                 <div>{{ experiment_environment }}</div>
-                {% endif %} Środowiskiem eksperymentu była komora antygrawitacyjna.
+                {% endif %} 
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -435,7 +447,7 @@
             <h3>
                 {% if experiment_method %}
                 <div>{{ experiment_method }}</div>
-                {% endif %} Metodą prób i błędów Gaussa.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -447,7 +459,7 @@
             <h3>
                 {% if object_effect %}
                 <div>{{ object_effect }}</div>
-                {% endif %} Szczury uzależniły się od mountain dew.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -459,7 +471,7 @@
             <h3>
                 {% if experiment_result %}
                 <div>{{ experiment_result }}</div>
-                {% endif %} 90% szczurów bardzo lubi mountain dew.
+                {% endif %}
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -480,7 +492,7 @@
             <h3>
                 {% if experiment_conclusions %}
                 <div>{{ experiment_conclusions }}</div>
-                {% endif %} Szczury wydają się kochać słodkie napoje.
+                {% endif %}
             </h3>
         </div>
     </div>
@@ -561,4 +573,4 @@
 
     </script>
 </body>
-</html>
+</html> 
