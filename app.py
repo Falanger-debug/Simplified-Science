@@ -22,7 +22,6 @@ def home():
         experiment_result = "Experiment result"
         experiment_conclusions = "Experiment conclusions"
 
-        better-prompts
         title = appAPI.getTitle(link)
         time.sleep(2)
         test_object = appAPI.getTestObject(link)
