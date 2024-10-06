@@ -34,30 +34,59 @@ chat_session = model.start_chat(
     ]
 )
 
-promptAddition = ' Musisz być tego pewny, postaraj się. Bez znaków specjalnych'
+promptAddition = """
+Do not use any special characters such as "*", "#", etc. Write in plain text and do not format the text in any way. 
+Start your answer right away, without any "hey", "I see", or other initial inserts.
+Do not suggest the user to look for information in other sources or provide links. 
+Provide a full answer to the question, based only on the available material. 
+Answers MUST BE ABSOLUTELY VALID, concise and clear and contain the most important information about the experiment.
+After entering the page, compare the source address with the following one. 
+If you are not on the correct page, then keep looking, but if you are on the correct page, then give me an answer.
+To answer, search ONLY the page provided to you as a link"""
 
 def getTitle(link):
-    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
+    prompt = """
+    I want to know the exact title of the article without any changes.
+Be honest and provide the title without additional comments.
+I want the chat to provide the title itself, without quotation marks, without ANY additional words, ONLY the title."""
 
     response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getTestObject(link):
-    prompt = "Tell me what the test object is"
+    prompt = """
+    Provide a detailed description of the test object in the experiment, including its characteristics, purpose, and any relevant information related to the study.
+    """
 
     response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getExperimentGoal(link):
-    prompt = "Tell me what the goal of the experiment is"
+    prompt = """
+    Please explain the main objective of this experiment, focusing on the scientific goals and the significance of the research
+    """
+
+    response = chat_session.send_message(prompt + promptAddition + link)
+    return response.text
+
+def getExperimentEnvironment(link):
+    prompt = """
+        Describe the environment in which the experiment takes place, including any specific conditions like temperature, humidity, gravity, and the use of specialized equipment. 
+        Mention whether the experiment was conducted in space or on Earth, and specify any unique constraints or challenges related to the environment that could affect the experiment's outcome.
+    """
 
     response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def askChat(message):
-    prompt = "mam pytanie."
+    prompt = "I have a question."
 
     response = chat_session.send_message(prompt + promptAddition + message)
     return response.text
 
-askChat("siemano")
+#print(getTitle("https://osdr.nasa.gov/bio/repo/data/studies/OSD-665"))
+#print(getTestObject("https://osdr.nasa.gov/bio/repo/data/studies/OSD-379"))
+#print(getExperimentGoal("https://osdr.nasa.gov/bio/repo/data/studies/OSD-665"))
+#print(getExperimentEnvironment("https://osdr.nasa.gov/bio/repo/data/studies/OSD-665"))
+
+#askChat("tell me something about that")
