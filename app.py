@@ -39,7 +39,7 @@ def home():
     # Przy metodzie GET wyświetlaj index.html
     return render_template('index.html')
 
-@app.route('/streszczenie', methods=['POST'])
+@app.route('/streszczenie', methods=['POST', 'GET'])
 def about():
     return render_template('streszczenie.html')
 
