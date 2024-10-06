@@ -8,7 +8,7 @@ import os
 import google.generativeai as genai
 
 # Configure the API key
-genai.configure(api_key="AIzaSyArNS7cIvztvHVwPjGgpXJVpbwj_8dJ6MY")
+genai.configure(api_key="AIzaSyCM-tmQs9JfNew-DKu7XoieaKAXcLDjVto")
 
 # Create the model configuration
 generation_config = {
@@ -34,27 +34,30 @@ chat_session = model.start_chat(
     ]
 )
 
+promptAddition = ' Musisz być tego pewny, postaraj się. Bez znaków specjalnych'
 
 def getTitle(link):
     prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getTestObject(link):
     prompt = "Tell me what the test object is"
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getExperimentGoal(link):
     prompt = "Tell me what the goal of the experiment is"
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def askChat(message):
     prompt = "mam pytanie."
 
-    response = chat_session.send_message(prompt + message)
+    response = chat_session.send_message(prompt + promptAddition + message)
     return response.text
+
+askChat("siemano")

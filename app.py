@@ -9,22 +9,26 @@ def home():
     if request.method == 'POST':
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
-        title = "Sztywny tytuł artykułu"
-        test_object = "Sztywny test_object"
-        experiment_goal = "Sztywny cel eksperymentu"
-        experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
-        experiment_environment = "Sztywne środowisko eksperymentu"
-        experiment_method = "Sztywna metoda eksperymentu"
-        object_effect = "Sztywny efekt obiektu"
-        experiment_result = "Sztywny wynik eksperymentu"
-        experiment_conclusions = "Sztywne wnioski z eksperymentu"
 
-        #title = appAPI.getTitle(link)
-        #test_object = appAPI.getTestObject(link)
+        title = "Tytuł na sztywno"
+        test_object = "Objekt testowy na sztywno"
+        experiment_goal = "Experimental goal na sztywno"
+        experiment_group_kind = "Experiment group kind"
+        experiment_environment = "Experiment Environment"
+        experiment_method = "Experiment method"
+        object_effect = "Object effect"
+        experiment_result = "Experiment result"
+        experiment_conclusions = "Experiment conclusions"
+
+        title = appAPI.getTitle(link)
+        test_object = appAPI.getTestObject(link)
         #experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_group_kind = appAPI.getExperimentGroupKind(link)
-        #experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_environment = appAPI.getExperimentEnvironment(link)
+        #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
+        #experiment_environment = appAPI.ExperimentEnvironment(link)
+        #experiment_method = appAPI.getExperimentMethod(link)
+        #object_effect = appAPI.getObjectEffect(link)
+        #experiment_result = appAPI.getExperimentResult(link)
+        #experiment_conclusions = appAPI.getExperimentConclucions(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
@@ -45,10 +49,10 @@ def about():
 
 @app.route('/chat_message', methods=['POST'])
 def chat_message():
-    #message = request.form['message']
-    #response = appAPI.askChat(message)
-    #return jsonify({'response': response})
-    return jsonify({'response': 'Odpowiedź na pytanie'})
+    message = request.form['message']
+    response = appAPI.askChat(message)
+
+    return jsonify({'response': response})
 
 if __name__ == '__main__':
     app.run(debug=True)
