@@ -311,6 +311,8 @@
         <div class="close-chat">
             <i class="fas fa-times" style="font-size: 30px; color: rgba(255, 255, 255, 0.1);"></i>
         </div>
+        <div id="messageContainer"></div> <!-- Kontener na wiadomości -->
+
         <div class="message-wrapper">
             <div class="profile_icon">
                 <i class="fas fa-user"></i>
@@ -473,7 +475,7 @@
             chat.style.display = 'flex'; // Ukryj czat
         });
 
-        document.getElementById('chatForm').addEventListener('submit', function(event) {
+        document.querySelector('form[action="/chat_message"]').addEventListener('submit', function(event) {
             event.preventDefault(); // Zatrzymanie domyślnego działania formularza
 
             const formData = new FormData(this);
@@ -526,6 +528,7 @@
             })
             .catch(error => console.error('Error:', error));
         });
+
 
 
 
