@@ -9,10 +9,10 @@ def home():
     if request.method == 'POST':
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
-        title = "Sztywny tytuł artykułu"
+        title = "Profilowanie transkrypcyjne wątroby myszy biorących udział w misji Rodent Research Reference Mission-1 (RRRM-1)"
         test_object = "Obiektem badań w eksperymencie Rodent Research Reference Mission (RRRM-1) były myszy, w tym 40 samic BALB/cAnNTac w dwóch grupach wiekowych: 20 młodych myszy w wieku 10-12 tygodni oraz 20 starszych myszy w wieku 32 tygodni."
         experiment_goal = "Celem eksperymentu Rodent Research Reference Mission (RRRM-1) było zbadanie wpływu lotu kosmicznego na organizmy myszy, w szczególności w odniesieniu do różnic wynikających z wieku. W tym celu porównywano efekty lotu kosmicznego u młodych (10-12 tygodni) i starszych (32 tygodnie) myszy."
-        experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
+        #experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
         experiment_environment = """Eksperyment Rodent Research Reference Mission (RRRM-1) został przeprowadzony w starannie kontrolowanym środowisku w kilku etapach zarówno na Ziemi, jak i na pokładzie Międzynarodowej Stacji Kosmicznej (ISS). Oto szczegóły dotyczące otoczenia i narzędzi użytych w trakcie eksperymentu: Przygotowanie myszy na Ziemi: Myszy (BALB/cAnNTac) pochodziły z Taconic Biosciences (Germantown, NY) i zostały przetransportowane do NASA Kennedy Space Center (KSC) na około 4 tygodnie przed startem. Były one oznakowane za pomocą chipów RFID (IMI-500). Myszom zapewniono standardowe warunki w obiekcie opieki nad zwierzętami (Animal Care Facility, ACF) w NASA KSC. Były trzymane w cyklu świetlnym 12:12 (12 godzin światła, 12 godzin ciemności), co było zsynchronizowane z cyklem świetlnym używanym w Transporterach i Habitatów na czas lotu kosmicznego. Zwierzęta były umieszczone w klatkach (5 myszy na klatkę) i początkowo karmione standardową karmą laboratoryjną i wodą, która była zmieniana dwa razy w tygodniu. Miały również standardowe wzbogacenie środowiskowe w postaci igloo w klatkach. Na trzy tygodnie przed startem, myszy przeniesiono na podłogę z siatki, aby symulować warunki panujące w Transporterach i Habitatów kosmicznych.
         Warunki kosmiczne i kontrolne: Myszy kosmiczne oraz kontrolne na Ziemi były trzymane w specjalnych Transporterach i Habitatach zaprojektowanych na potrzeby lotu kosmicznego. Myszy były karmione specjalnym jedzeniem NASA Nutrient-Upgraded Rodent Foodbars (NuRFB) i dostarczano im wodę przez systemy lixit, identyczne do tych używanych w warunkach lotu kosmicznego. W trakcie lotu i w warunkach kontrolnych na Ziemi, klatki z myszami były wymieniane na nowe jedzenie raz w tygodniu. Myszy kontrolne na Ziemi były trzymane w dwóch grupach: Habitat Ground Control (HGC) i Vivarium Ground Control (VGC). Grupy te miały różne warunki bytowania, jednak starano się odwzorować warunki kosmiczne, jak najdokładniej w grupie HGC.
         Mold contamination i problemy techniczne: Zarówno myszy kosmiczne, jak i Habitat Ground Control miały problem z zanieczyszczeniem jedzenia pleśnią, co mogło wywołać dodatkowy stres u zwierząt. Karmy w niektórych klatkach HGC odpadły i spadły na dno, co było stresujące dla zwierząt, ale nie uniemożliwiło im dostępu do pożywienia.
@@ -97,7 +97,7 @@ Wnioski z eksperymentu Rodent Research Reference Mission (RRRM-1) sugerują, że
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
                                test_object=test_object, experiment_goal=experiment_goal,
-                               experiment_group_kind=experiment_group_kind,
+                               #experiment_group_kind=experiment_group_kind,
                                experiment_environment=experiment_environment,
                                experiment_method=experiment_method,
                                object_effect=object_effect,
