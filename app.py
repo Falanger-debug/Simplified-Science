@@ -43,7 +43,7 @@ def home():
 def about():
     return render_template('streszczenie.html')
 
-@app.route('/streszczenie', methods=['POST'])
+@app.route('/example1', methods=['POST'])
 def example1():
     return render_template('1.html')
 
