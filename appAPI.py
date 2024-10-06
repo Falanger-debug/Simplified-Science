@@ -89,4 +89,4 @@ def askChat(message):
 #print(getExperimentGoal("https://osdr.nasa.gov/bio/repo/data/studies/OSD-665"))
 #print(getExperimentEnvironment("https://osdr.nasa.gov/bio/repo/data/studies/OSD-665"))
 
-#askChat("tell me something about that")
+askChat("tell me something about that")
