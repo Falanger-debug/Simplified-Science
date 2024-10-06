@@ -5,76 +5,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     <style>
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 100;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Ultralight.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 200;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Thin.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 300;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Light.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 400;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Regular.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 500;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Medium.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 600;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-SemiBold.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 700;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Bold.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 800;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Black.ttf");
-        }
-        @font-face {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-weight: 900;
-        src: url("https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProDisplay-Heavy.ttf");
+        img {
+            user-select: none;
+            -webkit-user-drag: none;
+            pointer-events: none;
         }
 
         body {
-            background: rgb(9,9,9);
-            background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgba(19,19,19,1) 100%);
+            background: rgb(9, 9, 9);
             color: white;
-            font-family: 'SF Pro Display', sans-serif;
+            font-family: "SF Pro Display", sans-serif;
+            overflow-x: hidden;
         }
 
         h1 {
-            color: rgb(37, 117, 252);
+            color: rgb(255, 255, 255);
         }
+
         h3 {
-            color:white;
+            color: white;
         }
+
         .title {
             display: flex;
             justify-content: center;
@@ -87,44 +40,65 @@
             flex-direction: column;
             gap: 50px;
             padding: 20px;
-            max-width: 1300px; /* Dodaj to */
-            margin: 0 auto; /* Dodaj to */
+            max-width: 1300px;
+            margin: 0 auto;
         }
+
         .go-back-button {
-            display:flex;
+            display: flex;
             justify-content: flex-start;
             align-items: center;
-            position:absolute;
+            position: absolute;
             gap: 20px;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.025);
-            border:none;
+            border: none;
             border-radius: 5px;
-            margin-top:15px;
-            margin-left:10px;
+            margin-top: 15px;
+            margin-left: 10px;
         }
+
         .go-back-button:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         .para {
             background-color: rgba(255, 255, 255, 0.05);
             padding: 40px;
-            outline: 1px solid rgba(255, 255, 255, 0.20);
+            outline: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             margin-block-start: 0em;
             margin-block-end: 0em;
         }
 
         h3 {
-            margin: 15px 0 0 0 ;
+            margin: 15px 0 0 0;
         }
 
         h2 {
             font-weight: 900;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .para h2 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .para>div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .para>h3 {
+            font-weight: 300;
         }
 
         .chat {
@@ -324,16 +298,6 @@
         background-color: #777; /* Kolor kciuka przy najechaniu myszką */
     }
 
-    img {
-        position: absolute;
-        top: 100%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        width: 150%;
-        height: auto;
-    }
-
     </style>
 </head>
 <body>
@@ -394,107 +358,127 @@
     </div>
 
     <div class="informacje">
-        <div class="para">
-            <h2>
-               Obiekt testowy:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=78822&format=png&color=ffffff" />
+                <h2>Obiekt testowy:</h2>
+            </div>
             <h3>
                 {% if test_object %}
-                    <div>
-                        {{ test_object }}
-                    </div>
-                {% endif %}
+                <div>{{ test_object }}</div>
+                {% endif %} Obiektem testowym jest rudy szczur.
             </h3>
+            <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
+            position: absolute;
+            top: 100%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 150%;
+            height: auto;
+          " />
         </div>
-    
-        <div class="para">
-            <h2>
-                {Cel eksperymentu; Po co?}
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=79605&format=png&color=ffffff" />
+                <h2>{Cel eksperymentu; Po co?}</h2>
+            </div>
             <h3>
                 {% if experiment_goal %}
-                    <div>
-                        {{ experiment_goal }}
-                    </div>
-                {% endif %}
+                <div>{{ experiment_goal }}</div>
+                {% endif %} Sprawdzenie, czy szczury lubią mountain dew.
             </h3>
         </div>
-    
-        <div class="para">
-            <h2>
-                Rozmiar badanej grupy:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=78833&format=png&color=ffffff" />
+                <h2>Rozmiar badanej grupy:</h2>
+            </div>
             <h3>
                 {% if experiment_group_kind %}
-                    <div>
-                        {{ experiment_group_kind }}
-                    </div>
-                {% endif %}
+                <div>{{ experiment_group_kind }}</div>
+                {% endif %} Grupa liczyła 69 szczurów.
             </h3>
         </div>
-
-        <div class="para">
-            <h2>
-                Środowisko eksperymentu:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=LlcqSiiusDa1&format=png&color=ffffff" />
+                <h2>Środowisko eksperymentu:</h2>
+            </div>
             <h3>
                 {% if experiment_environment %}
-                    <div>
-                        {{ experiment_environment }}
-                    </div>
-                {% endif %}
+                <div>{{ experiment_environment }}</div>
+                {% endif %} Środowiskiem eksperymentu była komora antygrawitacyjna.
             </h3>
+            <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
+            position: absolute;
+            top: 75%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 150%;
+            height: auto;
+          " />
         </div>
-
-        <div class="para">
-            <h2>
-                Jaką metodą przeprowadzano badanie:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=61028&format=png&color=ffffff" />
+                <h2>Jaką metodą przeprowadzano badanie:</h2>
+            </div>
             <h3>
                 {% if experiment_method %}
-                    <div>
-                        {{ experiment_method }}
-                    </div>
-                {% endif %}
+                <div>{{ experiment_method }}</div>
+                {% endif %} Metodą prób i błędów Gaussa.
             </h3>
         </div>
-
-        <div class="para">
-            <h2>
-                Jak eksperyment wpłynął na obiekt testowany?
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=78571&format=png&color=ffffff" />
+                <h2>Jak eksperyment wpłynął na obiekt testowany?</h2>
+            </div>
             <h3>
                 {% if object_effect %}
-                    <div>
-                        {{ object_effect }}
-                    </div>
-                {% endif %}
+                <div>{{ object_effect }}</div>
+                {% endif %} Szczury uzależniły się od mountain dew.
             </h3>
         </div>
-
-        <div class="para">
-            <h2>
-                Wyniki eksperymentu:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=61300&format=png&color=ffffff" />
+                <h2>Wyniki eksperymentu:</h2>
+            </div>
             <h3>
                 {% if experiment_result %}
-                    <div>
-                        {{ experiment_result }}
-                    </div>
-                {% endif %}
+                <div>{{ experiment_result }}</div>
+                {% endif %} 90% szczurów bardzo lubi mountain dew.
             </h3>
+            <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 150%;
+            height: auto;
+          " />
         </div>
-
-        <div class="para">
-            <h2>
-                Wnioski:
-            </h2>
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=6HXtdkOFaVXg&format=png&color=ffffff" />
+                <h2>Wnioski:</h2>
+            </div>
             <h3>
                 {% if experiment_conclusions %}
-                <div>
-                    {{ experiment_conclusions }}
-                </div>
-                {% endif %}
+                <div>{{ experiment_conclusions }}</div>
+                {% endif %} Szczury wydają się kochać słodkie napoje.
             </h3>
         </div>
     </div>
