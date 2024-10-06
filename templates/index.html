@@ -195,6 +195,24 @@
             pointer-events: none;
         }
 
+        .allMessageWrapper::-webkit-scrollbar {
+            width: 8px; /* Szerokość paska przewijania dla Chrome, Safari i innych WebKit */
+        }
+
+        .allMessageWrapper::-webkit-scrollbar-track {
+            background: transparent; /* Tło ścieżki przewijania */
+        }
+
+        .allMessageWrapper::-webkit-scrollbar-thumb {
+            background-color: #888; /* Kolor uchwytu przewijania */
+            border-radius: 10px; /* Zaokrąglone rogi */
+            border: 2px solid transparent; /* Dodaj trochę przestrzeni wokół */
+        }
+
+        .allMessageWrapper::-webkit-scrollbar-thumb:hover {
+            background-color: #555; /* Zmiana koloru na ciemniejszy podczas hover */
+        }
+
     </style>
 </head>
 <body>
