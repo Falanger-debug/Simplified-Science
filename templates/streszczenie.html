@@ -369,6 +369,22 @@
 
     <div class="informacje">
 
+
+        <div class="para" style="position: relative">
+            <div style="display: flex; gap: 15px">
+                <img style="width: 35px; height: 35px"
+                    src="https://img.icons8.com/?size=100&id=78822&format=png&color=ffffff" />
+                <h2>Słowa kluczowe:</h2>
+            </div>
+
+            <h3>
+                {% if most_common_words %}
+                <div>{{ most_common_words }}</div>
+                {% endif %}
+            </h3>
+
+        </div>
+
         <div class="para" style="position: relative; max-width: 1300px;">
             Zapisz publikację:
             <i class="far fa-save"></i>

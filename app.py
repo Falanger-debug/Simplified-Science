@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 
+import seleniumm as sele
 import appAPI
+import keywords as keyW
+most_common_words = []
 
 app = Flask(__name__)
 
@@ -22,6 +25,7 @@ def home():
 
         title = appAPI.getTitle(link)
         test_object = appAPI.getTestObject(link)
+        most_common_words = keyW.analyze_text_frequency(sele.unique_text)
         #experiment_goal = appAPI.getExperimentGoal(link)
         #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
         #experiment_environment = appAPI.ExperimentEnvironment(link)
