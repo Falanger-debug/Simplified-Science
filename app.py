@@ -43,10 +43,12 @@ def home():
 def about():
     return render_template('streszczenie.html')
 
-@app.route('/chat_message', methods=['GET', 'POST'])
-def chatMessage():
-    message = request.form.get('message')  # Użyj get() dla bezpieczeństwa
-    return jsonify({'response': message})
+@app.route('/chat_message', methods=['POST'])
+def chat_message():
+    message = request.form['message']  # Pobranie wiadomości z formularza
+    # Możesz przetworzyć wiadomość lub wykonać jakąś logikę, np. odpowiedzieć
+    response_message = f"Odpowiedź na: {message}"  # Przykładowa odpowiedź
+    return jsonify({'response': response_message})
 
 if __name__ == '__main__':
     app.run(debug=True)
