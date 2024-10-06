@@ -324,6 +324,16 @@
         background-color: #777; /* Kolor kciuka przy najechaniu myszką */
     }
 
+    img {
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 150%;
+        height: auto;
+    }
+
     </style>
 </head>
 <body>
@@ -373,6 +383,20 @@
     </div>
     {% endif %}
 
+    <div class="para" style="position: relative">
+        <div style="display: flex; gap: 15px">
+            <img style="width: 35px; height: 35px"
+                src="https://img.icons8.com/?size=100&id=78822&format=png&color=ffffff" />
+            <h2>Obiekt testowy:</h2>
+        </div>
+        <h3>
+            {% if test_object %}
+            <div>{{ test_object }}</div>
+            {% endif %} Obiektem testowym jest rudy szczur.
+        </h3>
+        <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png"/>
+    </div>
+
     <div class="title">
         <h1 style="margin-top: 15px;">
             {% if title %}
@@ -383,6 +407,8 @@
         </h1>
     </div>
     
+    
+
     <div class="informacje">
         <div class="para">
             <h2>
