@@ -345,18 +345,6 @@
         </form>
     </div>
 
-    {% if link %}
-    <div class="link-display">
-        Odebrany link: <a href="{{ link }}" target="_blank">{{ link }}</a>
-    </div>
-    {% endif %}
-
-    {% if knowledge %}
-    <div>
-        Odebrany poziom: {{ knowledge }}
-    </div>
-    {% endif %}
-
     <div class="title">
         <h1 style="margin-top: 15px;">
             {% if title %}
@@ -497,6 +485,10 @@
                 {% endif %}
             </h3>
         </div>
+    </div>
+
+    <div style="padding-left: 80px; padding-top: 40px; padding-bottom: 40px">
+        Komentarze (5)
     </div>
 
     <script>
