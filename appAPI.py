@@ -8,7 +8,7 @@ import os
 import google.generativeai as genai
 
 # Configure the API key
-genai.configure(api_key="AIzaSyBR4_Ii_2ACCGN2QsSDTaKJCAd8khYRYgI")
+genai.configure(api_key="AIzaSyCM-tmQs9JfNew-DKu7XoieaKAXcLDjVto")
 
 # Create the model configuration
 generation_config = {
@@ -59,3 +59,5 @@ def askChat(message):
 
     response = chat_session.send_message(prompt + promptAddition + message)
     return response.text
+
+askChat("siemano")
