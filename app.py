@@ -47,7 +47,7 @@ def about():
 def chat_message():
     message = request.form['message']
 
-    response_message = appAPI.chat_session.send_message(message)
+    response_message = appAPI.chat_session.send_message(message).text
 
     return jsonify({'response': response_message})
 
