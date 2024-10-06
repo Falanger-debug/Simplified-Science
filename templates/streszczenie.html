@@ -10,7 +10,6 @@
         img {
             user-select: none;
             -webkit-user-drag: none;
-            pointer-events: none;
         }
 
         body {
@@ -300,6 +299,30 @@
         background-color: #777; /* Kolor kciuka przy najechaniu myszką */
     }
 
+    .pasek-aktywnosci {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 200px;
+    }
+
+    .hoverimg {
+        cursor:pointer;
+    }
+
+    .hoverimg:hover {
+        cursor:pointer;
+    }
+
+    .stat {
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 7.5px
+    }
     </style>
 </head>
 <body>
@@ -337,18 +360,6 @@
         </form>
     </div>
 
-    {% if link %}
-    <div class="link-display">
-        Odebrany link: <a href="{{ link }}" target="_blank">{{ link }}</a>
-    </div>
-    {% endif %}
-
-    {% if knowledge %}
-    <div>
-        Odebrany poziom: {{ knowledge }}
-    </div>
-    {% endif %}
-
     <div class="title">
         <h1 style="margin-top: 15px;">
             {% if title %}
@@ -360,6 +371,39 @@
     </div>
 
     <div class="informacje">
+
+        <div style="display: flex; justify-content:space-between;align-items: center;" class="para">
+            <div style="gap: 25px;align-items:center; display: flex; position: relative; max-width: 1300px; vertical-align: middle;text-align: center;">
+                <div class="stat">
+                    <img class="hoverimg" style="width: 35px; height: 35px;" src="https://img.icons8.com/?size=100&id=59740&format=png&color=ffd000" />
+                    <h3 style="margin: 0; font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+                <div style="opacity: 0.25; margin: 0 20px 0 20px; background-color: white; width: 1px; height: 60px;"></div>
+                <div class="stat">
+                    <img class="hoverimg" style="width: 35px; height: 35px;" src="https://img.icons8.com/?size=100&id=83166&format=png&color=00ff11" />
+                    <h3 style="margin: 0;font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+                <div style="opacity: 0.25; margin: 0 20px 0 20px; background-color: white; width: 1px; height: 60px;"></div>
+                <div class="stat">
+                    <img class="hoverimg" style="width: 35px; height: 35px" src="https://img.icons8.com/?size=100&id=87726&format=png&color=ff2b2b" />
+                    <h3 style="margin: 0;font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+            </div>
+            <button style="
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            color: rgb(16, 16, 16);
+            background-color: #ffffff;
+            border: none;
+            border-radius: 15px;"><img style="width: 25px; height: 25px;" src="https://img.icons8.com/?size=100&id=59773&format=png&color=000000">Kopiuj URL Badania</button>
+            <!--to nie dziala nic wsm jak cos ale mozesz zrobic zeby dzialalo xd-->
+        </div>
+
         <div class="para" style="position: relative">
             <div style="display: flex; gap: 15px">
                 <img style="width: 35px; height: 35px"
@@ -369,7 +413,7 @@
             <h3>
                 {% if test_object %}
                 <div>{{ test_object }}</div>
-                {% endif %} Obiektem testowym jest rudy szczur.
+                {% endif %}
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -385,12 +429,12 @@
             <div style="display: flex; gap: 15px">
                 <img style="width: 35px; height: 35px"
                     src="https://img.icons8.com/?size=100&id=79605&format=png&color=ffffff" />
-                <h2>{Cel eksperymentu; Po co?}</h2>
+                <h2>Cel eksperymentu</h2>
             </div>
             <h3>
                 {% if experiment_goal %}
                 <div>{{ experiment_goal }}</div>
-                {% endif %} Sprawdzenie, czy szczury lubią mountain dew.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -402,7 +446,7 @@
             <h3>
                 {% if experiment_group_kind %}
                 <div>{{ experiment_group_kind }}</div>
-                {% endif %} Grupa liczyła 69 szczurów.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -414,7 +458,7 @@
             <h3>
                 {% if experiment_environment %}
                 <div>{{ experiment_environment }}</div>
-                {% endif %} Środowiskiem eksperymentu była komora antygrawitacyjna.
+                {% endif %} 
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -435,7 +479,7 @@
             <h3>
                 {% if experiment_method %}
                 <div>{{ experiment_method }}</div>
-                {% endif %} Metodą prób i błędów Gaussa.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -447,7 +491,7 @@
             <h3>
                 {% if object_effect %}
                 <div>{{ object_effect }}</div>
-                {% endif %} Szczury uzależniły się od mountain dew.
+                {% endif %}
             </h3>
         </div>
         <div class="para" style="position: relative">
@@ -459,7 +503,7 @@
             <h3>
                 {% if experiment_result %}
                 <div>{{ experiment_result }}</div>
-                {% endif %} 90% szczurów bardzo lubi mountain dew.
+                {% endif %}
             </h3>
             <img draggable="false" class="glow" src="https://i.imgur.com/QVU4Tnj.png" style="
             position: absolute;
@@ -480,9 +524,13 @@
             <h3>
                 {% if experiment_conclusions %}
                 <div>{{ experiment_conclusions }}</div>
-                {% endif %} Szczury wydają się kochać słodkie napoje.
+                {% endif %}
             </h3>
         </div>
+    </div>
+
+    <div style="padding-left: 80px; padding-top: 40px; padding-bottom: 40px">
+        Komentarze (5)
     </div>
 
     <script>
@@ -561,4 +609,4 @@
 
     </script>
 </body>
-</html>
+</html> 
