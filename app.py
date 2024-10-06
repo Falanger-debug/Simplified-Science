@@ -43,6 +43,10 @@ def home():
 def about():
     return render_template('streszczenie.html')
 
+@app.route('/streszczenie', methods=['POST'])
+def example1():
+    return render_template('1.html')
+
 @app.route('/chat_message', methods=['POST'])
 def chat_message():
     #message = request.form['message']
