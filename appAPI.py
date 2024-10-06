@@ -59,4 +59,3 @@ def askChat(message):
 
     response = chat_session.send_message(prompt + promptAddition + message)
     return response.text
-

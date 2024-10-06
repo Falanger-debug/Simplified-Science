@@ -9,23 +9,31 @@ def home():
     if request.method == 'POST':
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
-        title = "Profilowanie transkrypcyjne wątroby myszy biorących udział w misji Rodent Research Reference Mission-1 (RRRM-1)"
-        test_object = "Obiektem badań w eksperymencie Rodent Research Reference Mission (RRRM-1) były myszy, w tym 40 samic BALB/cAnNTac w dwóch grupach wiekowych: 20 młodych myszy w wieku 10-12 tygodni oraz 20 starszych myszy w wieku 32 tygodni."
-        experiment_goal = "Celem eksperymentu Rodent Research Reference Mission (RRRM-1) było zbadanie wpływu lotu kosmicznego na organizmy myszy, w szczególności w odniesieniu do różnic wynikających z wieku. W tym celu porównywano efekty lotu kosmicznego u młodych (10-12 tygodni) i starszych (32 tygodnie) myszy."
-        experiment_group_kind = "Sztywny rodzaj grupy eksperymentalnej"
 
+        title = "Tytuł na sztywno"
+        test_object = "Objekt testowy na sztywno"
+        experiment_goal = "Experimental goal na sztywno"
+        experiment_group_kind = "Experiment group kind"
+        experiment_environment = "Experiment Environment"
+        experiment_method = "Experiment method"
+        object_effect = "Object effect"
+        experiment_result = "Experiment result"
+        experiment_conclusions = "Experiment conclusions"
 
         title = appAPI.getTitle(link)
         test_object = appAPI.getTestObject(link)
-        experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_group_kind = appAPI.getExperimentGroupKind(link)
         #experiment_goal = appAPI.getExperimentGoal(link)
-        #experiment_environment = appAPI.getExperimentEnvironment(link)
+        #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
+        #experiment_environment = appAPI.ExperimentEnvironment(link)
+        #experiment_method = appAPI.getExperimentMethod(link)
+        #object_effect = appAPI.getObjectEffect(link)
+        #experiment_result = appAPI.getExperimentResult(link)
+        #experiment_conclusions = appAPI.getExperimentConclucions(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
                                test_object=test_object, experiment_goal=experiment_goal,
-                               #experiment_group_kind=experiment_group_kind,
+                               experiment_group_kind=experiment_group_kind,
                                experiment_environment=experiment_environment,
                                experiment_method=experiment_method,
                                object_effect=object_effect,
