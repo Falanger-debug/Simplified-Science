@@ -309,6 +309,21 @@
             flex-direction: column-reverse;
         }
         
+            /* Dla WebKit (Chrome, Safari) */
+    .allMessageWrapper::-webkit-scrollbar {
+        width: 8px; /* Szerokość scrollbara */
+        background-color: #333; /* Tło scrollbara */
+    }
+
+    .allMessageWrapper::-webkit-scrollbar-thumb {
+        background-color: #555; /* Kolor kciuka (części, którą przeciągamy) */
+        border-radius: 4px; /* Zaokrąglenie krawędzi */
+    }
+
+    .allMessageWrapper::-webkit-scrollbar-thumb:hover {
+        background-color: #777; /* Kolor kciuka przy najechaniu myszką */
+    }
+
     </style>
 </head>
 <body>
