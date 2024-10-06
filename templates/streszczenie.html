@@ -10,7 +10,6 @@
         img {
             user-select: none;
             -webkit-user-drag: none;
-            pointer-events: none;
         }
 
         body {
@@ -308,6 +307,22 @@
         width: 200px;
     }
 
+    .hoverimg {
+        cursor:pointer;
+    }
+
+    .hoverimg:hover {
+        cursor:pointer;
+    }
+
+    .stat {
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 7.5px
+    }
     </style>
 </head>
 <body>
@@ -369,9 +384,23 @@
 
     <div class="informacje">
 
-        <div class="para" style="position: relative; max-width: 1300px;">
-            Zapisz publikację:
-            <i class="far fa-save"></i>
+        <div class="para">
+            <div style="gap: 25px;align-items:center; display: flex; position: relative; max-width: 1300px; vertical-align: middle;text-align: center;">
+                <div class="stat">
+                    <img class="hoverimg" style="width: 45px; height: 45px;" src="https://img.icons8.com/?size=100&id=59740&format=png&color=ffd000" />
+                    <h3 style="margin: 0; font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+                <div style="opacity: 0.25; margin: 0 20px 0 20px; background-color: white; width: 1px; height: 60px;"></div>
+                <div class="stat">
+                    <img class="hoverimg" style="width: 45px; height: 45px;" src="https://img.icons8.com/?size=100&id=83166&format=png&color=00ff11" />
+                    <h3 style="margin: 0;font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+                <div style="opacity: 0.25; margin: 0 20px 0 20px; background-color: white; width: 1px; height: 60px;"></div>
+                <div class="stat">
+                    <img class="hoverimg" style="width: 45px; height: 45px" src="https://img.icons8.com/?size=100&id=87726&format=png&color=ff2b2b" />
+                    <h3 style="margin: 0;font-weight: 700;font-size: 25px;">120</h3>
+                </div>
+            </div>
         </div>
 
         <div class="para" style="position: relative">
