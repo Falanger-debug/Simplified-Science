@@ -27,6 +27,7 @@ def home():
         #experiment_environment = appAPI.getExperimentEnvironment(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
+        return render_template('1.html')
         return render_template('streszczenie.html', link=link, knowledge=knowledge, title=title,
                                test_object=test_object, experiment_goal=experiment_goal,
                                experiment_group_kind=experiment_group_kind,
