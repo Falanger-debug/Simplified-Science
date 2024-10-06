@@ -39,11 +39,11 @@ def home():
     # Przy metodzie GET wyświetlaj index.html
     return render_template('index.html')
 
-@app.route('/streszczenie', methods=['POST', 'GET'])
+@app.route('/streszczenie', methods=['POST'])
 def about():
     return render_template('streszczenie.html')
 
-@app.route('/chat_message', methods=['GET'])
+@app.route('/chat_message', methods=['GET', 'POST'])
 def chatMessage():
     message = request.form.get('message')  # Użyj get() dla bezpieczeństwa
     return "DOSTALEM WIADOMOSC OD CHATU" + message
