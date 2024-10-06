@@ -46,7 +46,7 @@ def about():
 @app.route('/chat_message', methods=['GET', 'POST'])
 def chatMessage():
     message = request.form.get('message')  # Użyj get() dla bezpieczeństwa
-    return "DOSTALEM WIADOMOSC OD CHATU" + message
+    return jsonify({'response': message})
 
 if __name__ == '__main__':
     app.run(debug=True)
