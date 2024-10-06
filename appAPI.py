@@ -34,23 +34,24 @@ chat_session = model.start_chat(
     ]
 )
 
+promptAddition = ' Musisz być tego pewny, postaraj się. Bez znaków specjalnych'
 
 def getTitle(link):
-    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł. Musisz być tego pewny, postaraj się"
+    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getTestObject(link):
     prompt = "Tell me what the test object is"
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def getExperimentGoal(link):
     prompt = "Tell me what the goal of the experiment is"
 
-    response = chat_session.send_message(prompt + link)
+    response = chat_session.send_message(prompt + promptAddition + link)
     return response.text
 
 def askChat(message):
