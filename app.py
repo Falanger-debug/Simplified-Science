@@ -1,3 +1,5 @@
+import time
+
 from flask import Flask, render_template, request, jsonify
 
 import appAPI
@@ -10,9 +12,9 @@ def home():
         link = request.form.get('link')  # Użyj get() dla bezpieczeństwa
         knowledge = request.form.get('poziom-wiedzy')
 
-        title = "Tytuł na sztywno"
-        test_object = "Objekt testowy na sztywno"
-        experiment_goal = "Experimental goal na sztywno"
+        #title = "Tytuł na sztywno"
+        #test_object = "Objekt testowy na sztywno"
+        #experiment_goal = "Experimental goal na sztywno"
         experiment_group_kind = "Experiment group kind"
         experiment_environment = "Experiment Environment"
         experiment_method = "Experiment method"
@@ -20,11 +22,16 @@ def home():
         experiment_result = "Experiment result"
         experiment_conclusions = "Experiment conclusions"
 
-        #title = appAPI.getTitle(link)
-        #test_object = appAPI.getTestObject(link)
-        #experiment_goal = appAPI.getExperimentGoal(link)
+        better-prompts
+        title = appAPI.getTitle(link)
+        time.sleep(2)
+        test_object = appAPI.getTestObject(link)
+        time.sleep(2)
+        experiment_goal = appAPI.getExperimentGoal(link)
+        time.sleep(2)
+
         #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
-        #experiment_environment = appAPI.ExperimentEnvironment(link)
+        experiment_environment = appAPI.getExperimentEnvironment(link)
         #experiment_method = appAPI.getExperimentMethod(link)
         #object_effect = appAPI.getObjectEffect(link)
         #experiment_result = appAPI.getExperimentResult(link)
