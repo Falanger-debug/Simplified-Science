@@ -28,13 +28,17 @@ def home():
         time.sleep(2)
         experiment_goal = appAPI.getExperimentGoal(link)
         time.sleep(2)
-
-        #experiment_group_kind = appAPI.getExperimentalGroupKind(link)
+        experiment_group_kind = appAPI.getExperimentalGroupKind(link)
+        time.sleep(2)
         experiment_environment = appAPI.getExperimentEnvironment(link)
-        #experiment_method = appAPI.getExperimentMethod(link)
-        #object_effect = appAPI.getObjectEffect(link)
-        #experiment_result = appAPI.getExperimentResult(link)
-        #experiment_conclusions = appAPI.getExperimentConclucions(link)
+        time.sleep(2)
+        experiment_method = appAPI.getExperimentMethod(link)
+        time.sleep(2)
+        object_effect = appAPI.getObjectEffect(link)
+        time.sleep(2)
+        experiment_result = appAPI.getExperimentResult(link)
+        time.sleep(2)
+        experiment_conclusions = appAPI.getExperimentConclucions(link)
 
         # Zwracamy szablon streszczenie.html, przekazując zmienne
         return render_template('streszczenie.html', title=title,
