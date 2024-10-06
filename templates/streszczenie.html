@@ -325,6 +325,7 @@
             <i class="fas fa-times" style="font-size: 30px; color: rgba(255, 255, 255, 0.1);"></i>
         </div>
         <div class="allMessageWrapper">
+            <div id="messageContainer"></div>
             <div class="message-wrapper">
                 <div class="profile_icon">
                     <i class="fas fa-user"></i>
@@ -333,7 +334,6 @@
                     Cześć, masz jakieś pytania? Chętnie pomogę!
                 </div>
             </div>
-            <div id="messageContainer"></div> <!-- Kontener na wiadomości -->
         </div>
         <form style="height: 60px;" action="/chat_message" method="POST">
             <input type="text" name="message" placeholder="Paste link here" required>
