@@ -36,7 +36,7 @@ chat_session = model.start_chat(
 
 
 def getTitle(link):
-    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł."
+    prompt = "Powiedz mi tytuł tego czegoś. Sam tytuł. Musisz być tego pewny, postaraj się"
 
     response = chat_session.send_message(prompt + link)
     return response.text

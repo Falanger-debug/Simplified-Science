@@ -113,10 +113,9 @@ def about():
 
 @app.route('/chat_message', methods=['POST'])
 def chat_message():
-    #message = request.form['message']
-    #response = appAPI.askChat(message)
-    #return jsonify({'response': response})
-    return jsonify({'response': 'Odpowiedź na pytanie'})
+    message = request.form['message']
+    response = appAPI.askChat(message)
+    return jsonify({'response': response})
 
 if __name__ == '__main__':
     app.run(debug=True)
